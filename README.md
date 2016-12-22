@@ -1,7 +1,7 @@
 nishad-storm-docker
 ============
 
-Modification of https://github.com/wurstmeister/storm-docker to use storm version 0.10.2. To change to another version of storm, change 'storm-nimbus/Dockerfile' with appropriate download link for the release.
+Modification of https://github.com/wurstmeister/storm-docker to use storm version 0.10.2. To change to another version of storm, change 'storm/Dockerfile' with appropriate download link for the release. Check docker-compose.yml to mount appropriate volumes. 
 
 
 
