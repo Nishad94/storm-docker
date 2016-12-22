@@ -1,0 +1,33 @@
+zookeeper:
+  image: nishad/zookeeper
+  ports: 
+    - "49181:2181"
+    - "22"
+nimbus:
+  image: nishad/storm-nimbus
+  ports:
+    - "49773:3773"
+    - "49772:3772"
+    - "49627:6627"
+    - "22"
+  volumes:
+    - /home/nishad/.epmp:/.epmp
+    - /home/nishad/reporting-data-integration-2.1.5-jar-with-dependencies.jar:/reporting-data-integration-2.1.5-jar-with-dependencies.jar
+  links: 
+    - zookeeper:zk
+supervisor:
+  image: nishad/storm-supervisor
+  ports:
+    - "8000"
+    - "22"
+  links: 
+    - nimbus:nimbus
+    - zookeeper:zk
+ui:
+  image: nishad/storm-ui
+  ports:
+    - "49080:8080"
+    - "22"
+  links: 
+    - nimbus:nimbus
+    - zookeeper:zk
