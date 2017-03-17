@@ -36,9 +36,9 @@ So, to open storm UI, type the following in your browser:
 ### How can I deploy a topology?
 To check running images:
 
-    docker images
+    docker ps
 
 Connect to the storm_nimbus docker image and execute storm:
 
-    docker exec -it {{storm_nimbus_image_name}} /bin/bash
-    storm jar target/your-topology-fat-jar.jar com.your.package.AndTopology topology-name
+    docker exec -it {{storm_nimbus_contained_id}} /bin/bash
+    storm jar target/your-topology-fat-jar.jar com.your.package.MainClass <Conf>
