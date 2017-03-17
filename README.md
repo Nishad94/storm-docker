@@ -5,11 +5,11 @@ Modification of https://github.com/wurstmeister/storm-docker to use storm versio
 
 
 
-##Pre-Requisites
+###Pre-Requisites
 
 - install docker-compose [http://docs.docker.com/compose/install/](http://docs.docker.com/compose/install/)
 
-##Usage
+###Usage
 
 Start a cluster:
 
@@ -23,11 +23,11 @@ Add more supervisors:
 
 - ```docker-compose scale supervisor=3```
 
-##Building
+###Building
 
 - ```rebuild.sh```
 
-##FAQ
+###FAQ
 ### How can I access Storm UI from my host?
 So, to open storm UI, type the following in your browser:
 
