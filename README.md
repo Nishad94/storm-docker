@@ -41,4 +41,4 @@ To check running images:
 Connect to the storm_nimbus docker image and execute storm:
 
     docker exec -it {{storm_nimbus_contained_id}} /bin/bash
-    storm jar target/your-topology-fat-jar.jar com.your.package.MainClass <Conf>
+    storm jar target/your-topology-fat-jar.jar com.your.package.MainClass <.epmp>
